@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 
 // Last
 app.get('*', function(req, res){
-    res.status(404).sendFile(__dirname + '/404.html')
+    res.status(404).sendFile(__dirname + '/public/pages/404.html')
   });
 
 app.listen(port, function () {
