@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            --sub-text: #7C7E80;
+            --orange: #E64910;
+            --teal: #36BCDA;
+            --green: #17BD28;
+            --purple: #9C4CDC;
+            --sky-blue: #0099FF;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%
+        }
+
+        body {
+            margin: 0px;
+            background: #222222;
+            font-family: "Kameron";
+        }
+
+        div.flex {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        div.flex.main{
+            background: white;
+        }
+
+
+
+        nav {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            /* background-color: lightblue; */
+            background: white;
+        }
+        div#site{
+            font-size: 2em;
+            margin: 1em
+        }
+        /* span#domain, span#route{
+            margin: 0px;
+        } */
+        span#domain {
+            color: var(--sky-blue);
+        }
+        span#route {
+            color: var(--sub-text);
+        }
+
+        div.nav-items {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            margin: 1em;
+            box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.1), -1px -1px 1.5px rgba(174, 178, 183, 0.1);
+            border-radius: 8px;
+        }
+
+        div.btn-inner {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0.5em;
+
+        }
+
+        .button-text {
+            color: var(--sub-text);
+            font-size: 1.2em
+        }
+
+        /* div#spacer {
+            width: 0.2em;
+            height: 2em;
+            margin: 0em 0.5em 0em 0.5em;
+            box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.09), inset 2px 2px 4px rgba(0, 0, 0, 0.53);
+            border-radius: 60px;
+        } */
+
+        /* svg#tb-svg {
+            height: 1.2em;
+            height: 0.2em;
+        }
+
+        svg#m-svg {
+            height: 1em;
+
+        } */
+
+        div#divider {
+            width: 100%;
+            height: 7px;
+            box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.04), inset 2px 2px 4px rgba(0, 0, 0, 0.22);
+            background: white;
+        }
+        div.push{
+            width: 100%;
+        }
+        section.tools {
+            
+            margin: 100px 0px 100px 0px;
+            /* background-color: white; */
+            width: 80vw;
+            height: 60vh;
+            /* margin-top: 20vh; */
+        }
+
+        div.grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 3em;
+            justify-content: stretch;
+            width: 100%;
+            height: 100%;
+        }
+
+        div.tool{
+            flex-flow: column nowrap;
+        }
+        div.tool > div#name{
+            margin: 25px;
+            
+
+            font-size: 30px;
+        }
+        div.tool > div#desc{
+            margin: 25px;
+            font-size: 20px;
+
+        }
+        div.tool#one {
+            border: 3px solid var(--orange);
+            border-radius: 20px;
+        }
+        div.tool#one > #name{
+            color: var(--orange);
+        }
+        div.tool#one > #desc{
+            color: var(--orange);
+        }
+        div.tool#two {
+            border: 3px solid var(--teal);
+            border-radius: 20px;
+        }
+        div.tool#two > #name{
+            color: var(--teal);
+        }
+        div.tool#two > #desc{
+            color: var(--teal);
+        }
+        div.tool#three {
+            border: 3px solid var(--green);
+            border-radius: 20px;
+        }
+        div.tool#three > #name{
+            color: var(--green);
+        }
+        div.tool#three > #desc{
+            color: var(--green);
+        }
+        div.tool#four {
+            border: 3px solid var(--purple);
+            border-radius: 20px;
+        }
+        div.tool#four > #name{
+            color: var(--purple);
+        }
+        div.tool#four > #desc{
+            color: var(--purple);
+        }
+        div.tool#four:hover > div{
+            color: white
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        svg#wave > path{
+            fill: white;
+        }
+
+/* 
+        svg#wave{
+
+            filter: drop-shadow(0px 5px 5px red) drop-shadow(0px -10px 0px white);
+
+        }
+        div#hide-blur{
+            width: 100%;
+            height: 5px;
+            margin-bottom: -2.5px;
+            z-index: 2;
+            background-color: white;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-items">
+            <div id="site">
+                <span id="domain">RileyCrym.com</span> <span id="route">/ Math</span>
+            </div>
+            <div class="buttons flex">
+            <div class="tool-gallery btn">
+                <div class="btn-inner">
+                    <div id="tool-gallery" class="button-text">Tool Gallery</div>
+                </div>
+            </div>
+            <div class="mission btn">
+                <div class="btn-inner">
+                    <div id="tool-gallery" class="button-text">Mission</div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="divider"></div>
+    </nav>
+    <div id="push"></div>
+    <div class="flex main">
+        <section class="tools">
+            <div class="grid">
+                <div class="tool" id="one">
+           
+                        <div id="name">2D Distance Formula</div>
+                        <div id="desc">Find the distance between two points</div>
+          
+                </div>
+                <div class="tool" id="two">
+                    
+                    <div id="name">Quadratic Formula</div>
+                    <div id="desc">Solve a quadratic equation</div>
+          
+                </div>
+                <div class="tool" id="three">
+
+                    <div id="name">Pythagorean Theorem</div>
+                    <div id="desc">Using the length of two sides of a triangle, find the third</div>
+
+
+                </div>
+                <div class="tool" id="four">
+
+                    <div id="name">Number Generator</div>
+                    <div id="desc">Even, odd, prime, pi, fibonacci, random</div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+        <svg id="wave" viewBox="0 0 1913 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1913 0H0V55.7825L79.7084 63.844C82.4294 64.1089 85.2434 64.384 88.1471 64.668C170.301 72.7021 324.275 87.7595 478.25 75.8982C552.71 70.3735 627.169 58.554 701.629 46.7341C786.586 33.248 871.543 19.762 956.5 15.6265C1062.86 10.248 1169.22 19.1897 1275.58 28.1313C1328.64 32.5918 1381.69 37.0522 1434.75 39.7351C1594.17 47.4951 1753.58 39.9612 1833.29 35.6667L1913 31.6738V0Z"/>
+            </svg>
+            <footer>
+
+        <div class="main-text">
+            <div id="RileyCrym">RileyCrym</div>
+        </div>
+        <div class="tool-list">
+
+        </div>
+    </footer>
+    
+
+            <!-- <svg id="wave" viewBox="0 0 1913 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1913 0H0V55.7825L79.7084 63.844C82.4294 64.1089 85.2434 64.384 88.1471 64.668C170.301 72.7021 324.275 87.7595 478.25 75.8982C552.71 70.3735 627.169 58.554 701.629 46.7341C786.586 33.248 871.543 19.762 956.5 15.6265C1062.86 10.248 1169.22 19.1897 1275.58 28.1313C1328.64 32.5918 1381.69 37.0522 1434.75 39.7351C1594.17 47.4951 1753.58 39.9612 1833.29 35.6667L1913 31.6738V0Z"/>
+    </g>
+        <defs>
+            <filter id="filter0_d" x="0" y="0" width="1925" height="92.2885" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="3"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>    
+    </svg> -->
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script>
+        $('div#push').css("height", $('nav').height() + $('div#divider').height())
+    </script>
+</body>
+
+</html>
