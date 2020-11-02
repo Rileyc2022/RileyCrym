@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            --sub-text: #7C7E80;
+            
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%
+        }
+
+        body {
+            margin: 0px;
+            background: linear-gradient(111.34deg, #32373C 0%, #18191C 100%);
+            font-family: "Kameron";
+        }
+
+        div.flex {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+
+
+        nav {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            /* background-color: lightblue; */
+        }
+
+        div#logo {
+            color: white;
+            font-size: 2em;
+            margin: 1em
+        }
+
+        div.nav-items {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .btn {
+            margin: 1em;
+            /* background: #2D3135; */
+            box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.1), -1px -1px 1.5px rgba(174, 178, 183, 0.1);
+            border-radius: 8px;
+        }
+
+        div.btn-inner {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0.5em;
+
+        }
+
+        .button-text {
+            color: var(--sub-text);
+            font-size: 1.2em
+        }
+
+        div#spacer {
+            width: 0.2em;
+            height: 2em;
+
+            /* background-color:red; */
+            margin: 0em 0.5em 0em 0.5em;
+            box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.09), inset 2px 2px 4px rgba(0, 0, 0, 0.53);
+            border-radius: 60px;
+        }
+
+        svg#tb-svg {
+            height: 1.2em;
+            /* height: 0.2em; */
+        }
+
+        svg#m-svg {
+            height: 1em;
+
+        }
+
+        div#divider {
+            width: 100%;
+            height: 7px;
+            /* background: rgba(255, 255, 255, 0.01); */
+            /* background: rgba(255, 255, 255, 0.01); */
+            box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.04), inset 2px 2px 4px rgba(0, 0, 0, 0.22);
+            border-radius: 60px;
+        }
+        div.push{
+            width: 100%;
+        }
+        section.tools {
+            margin-top: 100px;
+            /* background-color: white; */
+            width: 80vw;
+            height: 60vh;
+            /* margin-top: 20vh; */
+        }
+
+        div.grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 3em;
+            justify-content: stretch;
+            width: 100%;
+            height: 100%;
+        }
+
+        div.tool{
+            flex-flow: column nowrap;
+        }
+        div.tool > div#name{
+            margin: 25px;
+            
+            color: white;
+            font-size: 30px;
+        }
+        div.tool > div#desc{
+            color: var(--sub-text)
+        }
+        div.tool#one {
+            border: 3px solid #E64910;
+            border-radius: 20px;
+        }
+    
+        div.tool#two {
+            border: 3px solid #3698DA;
+            border-radius: 20px;
+        }
+        div.tool#three {
+            border: 3px solid #17BD28;
+            border-radius: 20px;
+        }
+        div.tool#four {
+            border: 3px solid #9C4CDC;
+            border-radius: 20px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-items">
+            <div id="logo">RileyCrym</div>
+            <div class="tool-gallery btn">
+                <div class="btn-inner">
+                    <div id="tool-gallery" class="button-text">Tool Gallery</div>
+
+                    <div id="spacer"></div>
+                    <svg id="tb-svg" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.46667 0C0.656649 0 0 0.656649 0 1.46667V8.8C0 9.61002 0.656649 10.2667 1.46667 10.2667H8.8C9.61002 10.2667 10.2667 9.61002 10.2667 8.8V1.46667C10.2667 0.656649 9.61002 0 8.8 0H1.46667ZM2.93333 1.46667C2.12332 1.46667 1.46667 2.12332 1.46667 2.93333V7.33333C1.46667 8.14335 2.12332 8.8 2.93333 8.8H7.33333C8.14335 8.8 8.8 8.14335 8.8 7.33333V2.93333C8.8 2.12332 8.14335 1.46667 7.33333 1.46667H2.93333Z"
+                            fill="#7C7E80" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.2 0C12.39 0 11.7333 0.656649 11.7333 1.46667V8.8C11.7333 9.61002 12.39 10.2667 13.2 10.2667H20.5333C21.3434 10.2667 22 9.61002 22 8.8V1.46667C22 0.656649 21.3434 0 20.5333 0H13.2ZM14.6667 1.46667C13.8566 1.46667 13.2 2.12332 13.2 2.93333V7.33333C13.2 8.14335 13.8566 8.8 14.6667 8.8H19.0667C19.8767 8.8 20.5333 8.14335 20.5333 7.33333V2.93333C20.5333 2.12332 19.8767 1.46667 19.0667 1.46667H14.6667Z"
+                            fill="#7C7E80" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.46667 11.7333C0.656649 11.7333 0 12.39 0 13.2V20.5333C0 21.3434 0.656649 22 1.46667 22H8.8C9.61002 22 10.2667 21.3434 10.2667 20.5333V13.2C10.2667 12.39 9.61002 11.7333 8.8 11.7333H1.46667ZM2.93333 13.2C2.12332 13.2 1.46667 13.8566 1.46667 14.6667V19.0667C1.46667 19.8767 2.12332 20.5333 2.93333 20.5333H7.33333C8.14335 20.5333 8.8 19.8767 8.8 19.0667V14.6667C8.8 13.8566 8.14335 13.2 7.33333 13.2H2.93333Z"
+                            fill="#7C7E80" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.2 11.7333C12.39 11.7333 11.7333 12.39 11.7333 13.2V20.5333C11.7333 21.3434 12.39 22 13.2 22H20.5333C21.3434 22 22 21.3434 22 20.5333V13.2C22 12.39 21.3434 11.7333 20.5333 11.7333H13.2ZM14.6667 13.2C13.8566 13.2 13.2 13.8566 13.2 14.6667V19.0667C13.2 19.8767 13.8566 20.5333 14.6667 20.5333H19.0667C19.8767 20.5333 20.5333 19.8767 20.5333 19.0667V14.6667C20.5333 13.8566 19.8767 13.2 19.0667 13.2H14.6667Z"
+                            fill="#7C7E80" />
+                    </svg>
+                </div>
+            </div>
+            <div class="mission btn">
+                <div class="btn-inner">
+                    <div id="tool-gallery" class="button-text">Mission</div>
+                    <div id="spacer"></div>
+                    <svg id="m-svg" viewBox="0 0 41 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.66667 7.33333L2 19H38L23.6667 2L16 13.6667L9.66667 7.33333Z" stroke="#7C7E80"
+                            stroke-width="2" />
+                    </svg>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="divider"></div>
+    </nav>
+    <div id="push"></div>
+    <div class="flex">
+        <section class="tools">
+            <div class="grid">
+                <div class="tool" id="one">
+           
+                        <div id="name">2D Distance Formula</div>
+                        <div id="desc">Find the distance between two points</div>
+          
+                </div>
+                <div class="tool" id="two">
+                    
+                    <div id="name">Quadratic Formula</div>
+                    <div id="desc">Solve a quadratic equation</div>
+          
+                </div>
+                <div class="tool" id="three">
+
+                    <div id="name">Pythagorean Theorem</div>
+                    <div id="desc">Using the length of two sides of a triangle, find the third</div>
+
+
+                </div>
+                <div class="tool" id="four">
+
+
+                    <div id="name">Number Generator</div>
+                    <div id="desc">Even, odd, prime, pi, fibonacci, random</div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script>
+        $('div#push').css("height", $('nav').height() + $('div#divider').height())
+    </script>
+</body>
+
+</html>
