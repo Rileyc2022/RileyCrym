@@ -47,6 +47,7 @@
             height: 100px;
             /* background-color: lightblue; */
             background: white;
+            z-index: 2;
         }
 
         div#site {
@@ -147,24 +148,23 @@
 
         div.tool>div.name {
             margin: 25px;
-
-
             font-size: 30px;
         }
 
         div.tool>div.desc {
             margin: 25px;
             font-size: 20px;
-
+            font-family: "Open Sans";
         }
 
         div.containers {
             perspective: 40px;
+            transition: transform 0.2s;
 
             
         }
         div.containers:hover{
-
+            transform: scale(1.05);
         }
 
         div.tool {
@@ -183,6 +183,7 @@
         div.tool:hover {
             cursor: pointer;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            
         }
 
 
@@ -283,6 +284,48 @@
 .hidden {
   display: none;
 }
+
+footer{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer > .main-text{
+    margin-left: 10%
+}
+div#RileyCrym{
+    font-size: 2em;
+    color:white;
+}
+div#legal{
+    color: var(--sub-text);
+    font-family: "Open Sans";
+    font-size: 1.2em;
+}
+div.tool-list{
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 1.2em;
+    color: var(--sub-text);
+    margin-right: 10%
+}
+div.tool-list > a{
+    cursor: pointer;
+}
+a#tool-link1:hover{
+    color: var(--orange)
+}
+a#tool-link2:hover{
+    color: var(--teal)
+}
+a#tool-link3:hover{
+    color: var(--green)
+}
+a#tool-link4:hover{
+    color: var(--purple)
+}
+
     </style>
 </head>
 
@@ -315,7 +358,6 @@
                     <div class="tool" id="one">
                         <div class="name">2D Distance Formula</div>
                         <div class="desc">Find the distance between two points</div>
-                        <span id="helper" class="hidden"></span>
                     </div>
                 </div>
                 <div class="containers">
@@ -356,9 +398,13 @@
 
         <div class="main-text">
             <div id="RileyCrym">RileyCrym</div>
+            <div id="legal">Copyright © 2020 RileyCrym. All Rights Reserved</div>
         </div>
         <div class="tool-list">
-
+            <a id="tool-link1">2D Distance Formula</a>
+            <a id="tool-link2">Quadratic Formula</a>
+            <a id="tool-link3">Pythagorean Theorem</a>
+            <a id="tool-link4">Number Generator</a>
         </div>
     </footer>
 
@@ -396,8 +442,8 @@
             y: 0,
             updatePosition: function (event) {
                 var e = event || window.event;
-                this.x = e.clientX - this._x;
-                this.y = (e.clientY - this._y) * -1;
+                this.x = e.pageX - this._x;
+                this.y = (e.pageY - this._y) * -1;
 
             },
             setOrigin: function (e) {
