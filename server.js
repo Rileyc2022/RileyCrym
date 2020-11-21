@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.use('/cdn', require("./cdn"));
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/index2.html')
 })
 
 
@@ -18,5 +18,5 @@ app.get('*', function(req, res){
   });
 
 app.listen(port, function () {
-    console.log(` Waiting for a friend on port ${port}`)
+    console.log(`Waiting for a friend on port ${port}`)
 })
