@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         html,
@@ -32,7 +34,7 @@
             font-weight: bold;
             font-size: 500px;
             text-align: center;
-            background: linear-gradient(to right, rgb(255, 81, 0), orange);
+            background: rgb(128, 127, 127);
             -webkit-background-clip: text;
 
         }
@@ -43,6 +45,7 @@
             margin-top: 5px;
             color: rgb(128, 127, 127);
             transition: 0.4s opacity ease-in;
+            font-family: 'Open Sans', sans-serif;
             
         }
         h2#sub1{
@@ -55,10 +58,10 @@
             
             color: rgb(128, 127, 127);
             transition: 0.4s opacity ease-in 0.2s, 0.2s color ease-in 0s;
-            background: linear-gradient(to right, rgb(255, 81, 0), orange);
-            -webkit-background-clip: text;
+            /* background: linear-gradient(to right, rgb(255, 81, 0), orange); */
+            /* -webkit-background-clip: text; */
             opacity: 0;
-            position: relative;
+            /* position: relative; */
             
         }
 
@@ -69,9 +72,9 @@
             /* zoom:200; */
 
 
-            color: transparent;
+            color: #0099FF;
         }
-        a:hover::after {
+        /* a:hover::after {
         content: "";
         position: absolute;
         z-index: -2;
@@ -80,7 +83,7 @@
         height: 2px;
         width: 100%;
         background: linear-gradient(to right, rgb(255, 81, 0), orange);
-        }
+        } */
         @media only screen and (max-width: 480px) {
             h1#text {
                 font-size:100px;
