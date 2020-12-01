@@ -1,0 +1,100 @@
+
+
+
+        section.tools {
+
+            margin: 100px 0px 100px 0px;
+
+            width: 80vw;
+            height: 60vh;
+
+        }
+
+        div.grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 3em;
+            justify-content: stretch;
+            width: 100%;
+            height: 100%;
+        }
+
+        div.tool {
+            flex-flow: column nowrap;
+
+        }
+
+        div.tool>div.name {
+            margin: 25px;
+            font-size: 30px;
+        }
+
+        div.tool>div.desc {
+            margin: 25px;
+            font-size: 20px;
+            font-family: "Open Sans";
+        }
+
+        div.containers {
+            perspective: 40px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            
+        }
+        div.containers:hover{
+            transform: scale(1.05);
+        }
+        div.containers:active{
+            transform: scale(1);
+        }
+
+        div.tool {
+            padding: 3px;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            color: white;
+        }
+
+        div.tool:hover {
+            cursor: pointer;
+         
+            
+        }
+
+
+
+        div.tool#one {
+            background-color: var(--orange);
+            
+        }
+        div.tool#one:hover{
+            box-shadow: 0 8px 16px 0 rgb(230, 73, 16, 0.6);
+        }
+
+
+
+        div.tool#two{
+            background-color: var(--teal);
+        }
+        div.tool#two:hover{
+            box-shadow: 0 8px 16px 0 rgb(54, 188, 218, 0.6);
+        }
+
+
+        div.tool#three{
+            background-color: var(--green);
+        }
+        div.tool#three:hover{
+            box-shadow: 0 8px 16px 0 rgb(23, 189, 40, 0.6);
+        }
+
+        div.tool#four{
+            background-color: var(--purple);
+        }
+        div.tool#four:hover{
+            box-shadow: 0 8px 16px 0 rgb(156, 76, 220, 0.6);
+        }

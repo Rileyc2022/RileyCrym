@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/Rileyc2022/RileyCrym#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-rate-limit": "^5.2.3",
+    "portscanner": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
