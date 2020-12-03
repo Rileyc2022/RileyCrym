@@ -2,6 +2,11 @@ const express = require('express')
 const app = express();
 const port = process.env.PORT || 80
 const handlebars = require('express-handlebars');
+const fs = require('fs');
+const chalk = require('chalk');
+const { log } = require('./tools');
+
+
 app.use(express.static('public'));
 app.use('/cdn', require("./cdn"));
 app.use('/math', require("./math"));
@@ -21,6 +26,9 @@ app.engine('hbs', handlebars({
     partialsDir: __dirname + '/views/partials/'
 }));
 
+// Call log function in tools
+log(app)
+  
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html')

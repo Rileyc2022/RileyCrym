@@ -4,8 +4,8 @@ function getDistance(xA, yA, xB, yB) {
 	var yDiff = yA - yB;
 
 	if( Math.sqrt(xDiff * xDiff + yDiff * yDiff).toString().length > 5){
-
-        answer.value = "\\sqrt{" + xDiff * xDiff + yDiff * yDiff + "}"
+        let temp = xDiff * xDiff + yDiff * yDiff;
+        answer.value = "\\sqrt{" + temp + "}"
         answer.isMathJax = true
         
     }else{
@@ -131,6 +131,14 @@ function updateTable (xvalues, yvalues) {
 }
 
 $('div#calculator').height($('div.tool').height())
+
+$('body').jGravity({ 
+    target: 'everything',
+    drag: true,
+    depth: 3,
+});
+
+
 
 // screenshot()
 // let bounds={

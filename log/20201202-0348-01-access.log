@@ -1,0 +1,18 @@
+[0mGET /12121 [33m404[0m 3.270 ms - 3287[0m
+::1 - - [02/Dec/2020:03:34:57 +0000] "GET /12121 HTTP/1.1" 404 3287
+::1 - - [02/Dec/2020:03:35:53 +0000] "GET /12121 HTTP/1.1" 404 3287 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:37:03 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:37:23 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:37:25 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:37:26 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:37:40 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:38:25 +0000] "GET / HTTP/1.1" 200 586 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15"
+::1 - - [02/Dec/2020:03:38:26 +0000] "GET /favicon.ico HTTP/1.1" 404 3287 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15"
+::1 - - [02/Dec/2020:03:38:37 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15"
+::1 - - [02/Dec/2020:03:38:37 +0000] "GET /favicon.ico HTTP/1.1" 404 3287 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15"
+::1 - - [02/Dec/2020:03:38:43 +0000] "GET / HTTP/1.1" 200 586 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15"
+::1 - - [02/Dec/2020:03:40:14 +0000] "GET /fdsadsa HTTP/1.1" 404 3287 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:54:04 +0000] "GET /reafeaefs HTTP/1.1" 404 3287 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [02/Dec/2020:03:54:15 +0000] "GET /reafeaefsfdaf HTTP/1.1" 404 3287 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::1 - - [03/Dec/2020:03:55:00 +0000] "GET /reafeaefsfdaffda HTTP/1.1" 404 3287 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+::ffff:69.162.83.246 - - [02/Dec/2020:10:30:04 +0000] "GET http://example.com/ HTTP/1.1" 200 586 "-" "Go-http-client/1.1"
