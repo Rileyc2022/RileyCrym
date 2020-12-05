@@ -132,11 +132,11 @@ function updateTable (xvalues, yvalues) {
 
 $('div#calculator').height($('div.tool').height())
 
-$('body').jGravity({ 
-    target: 'everything',
-    drag: true,
-    depth: 3,
-});
+// $('body').jGravity({ 
+//     target: 'everything',
+//     drag: true,
+//     depth: 3,
+// });
 
 
 

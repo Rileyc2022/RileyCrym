@@ -69,7 +69,28 @@ div.buttons{
     margin-right: 7%;
 }
 
-.btn {
+div.button{
+    margin: 1em;
+    box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.1), -1px -1px 1.5px rgba(174, 178, 183, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-bottom 0.1s ease-in, transform 0.1s ease-in;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: var(--sub-text);
+    padding: 0.7em;
+    text-align: center;
+}
+div.button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px 0 rgba(0, 57, 95, 0.3);
+    color: var(--sky-blue);
+}
+
+div.button:active{
+    transform: scale(1);
+}
+
+/* .btn {
     margin: 1em;
     box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.1), -1px -1px 1.5px rgba(174, 178, 183, 0.1);
     border-radius: 8px;
@@ -93,7 +114,9 @@ div.btn-inner {
     align-items: center;
     padding: 0.7em;
 
-}
+} */
+
+
 
 .button-text {
 

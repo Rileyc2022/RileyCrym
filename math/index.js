@@ -8,7 +8,7 @@ router.get('/', function(req, res){
     
     // res.sendStatus(403)
 })
-//
+//'https://cdnjs.cloudflare.com/ajax/libs/jGravity/0.8.0/jGravity-min.js'
 
 router.get('/2d-distance-formula', function(req, res){
     // if(req.query.pwd == "12345678900987654321"){
@@ -16,7 +16,7 @@ router.get('/2d-distance-formula', function(req, res){
             layout: 'math',
             title: '2D Distance Formula',
             css: ['template.css', '2d-distance-formula.css'],
-            js: [ 'https://cdnjs.cloudflare.com/ajax/libs/jGravity/0.8.0/jGravity-min.js','/js/math/2d-distance-formula.js'],
+            js: ['/js/math/2d-distance-formula.js'],
             headScripts: ['https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',]});
     // }else{
         // res.sendStatus(403)
