@@ -10,21 +10,43 @@ router.get('/', function(req, res){
     //     // Status is 'open' if currently in use or 'closed' if available
     //     res.send(status)
     //   })
-    res.sendFile(__dirname + '/index.html')
-    console.log("GET Request for /compsci/")
-
+    var ans = "";
+    if(req.query.ip){
+      let ip = req.query.ip;
+      let port = req.query.port;
+          portscanner.checkPortStatus(port, ip, function(error, status) {
+          // Status is 'open' if currently in use or 'closed' if available
+           ans = status;
+        })
+    }
+    
+    res.render('open-port', {
+      layout: 'compsci',
+      title: 'Open Port Checker',
+      css: ['template.css', 'open-port.css'],
+      js: ['/js/compsci/open-port.js'],
+      headScripts: [],
+      status: ans,
+      })
 })
 router.get('/port', function(req, res){
-  let ip = req.query.ip;
-  let port = req.query.port;
-      portscanner.checkPortStatus(port, ip, function(error, status) {
-      // Status is 'open' if currently in use or 'closed' if available
-      res.send(status)
-    })
-    console.log("GET Request for /compsci/port")
+    let ip = req.query.ip;
+    let port = req.query.port;
+    let count = req.query.count;
 
-})
-
+        portscanner.checkPortStatus(port, ip, function(error, status) {
+        // Status is 'open' if currently in use or 'closed' if available
+        if(error){
+          console.log(error)
+        }else{
+          let data = {
+            results: status,
+            count: count
+          }
+          res.send(data);
+        }
+      })
+ });
 
 
 module.exports = router;
