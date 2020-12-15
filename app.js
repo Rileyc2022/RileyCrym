@@ -5,7 +5,7 @@ const handlebars = require('express-handlebars');
 const fs = require('fs');
 const chalk = require('chalk');
 const { log } = require('./tools');
-
+const basicAuth = require('express-basic-auth')
 
 app.use(express.static('public'));
 app.use('/cdn', require("./cdn"));
@@ -28,11 +28,25 @@ app.engine('hbs', handlebars({
 
 // Call log function in tools
 log(app)
-  
+
+var staticUserAuth = basicAuth({
+    users: {
+        'Admin': 'secret1234'
+    },
+    challenge: true
+})
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html')
 })
+app.get('/development', staticUserAuth, function (req, res) {
+    // res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    res.status(200).send("HEHE <a href='./logout'> Log out </a>")
+})
+app.get('/logout', function (req, res) {
+    // res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    res.status(401).send("Logged out <a href='./development'> Log in </a>")
+});
 
 // Last
 app.get('*', function(req, res){

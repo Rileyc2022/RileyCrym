@@ -77,7 +77,7 @@ $("input").on('change textInput input', function(){
     
 });
 
-$(".reset.btn").click(function() {
+$("div#reset").click(function() {
 $('input').val('')
 $('span#anw').html('')
 nums = []

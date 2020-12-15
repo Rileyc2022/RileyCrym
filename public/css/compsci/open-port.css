@@ -46,6 +46,8 @@ input#ip, input#port{
 }
 div#success-message{
     display: none;
+    color: var(--sub-text);
+    font-family: "Open Sans";
 }
 div#success-message > span.constColor{
     color: var(--sky-blue);
