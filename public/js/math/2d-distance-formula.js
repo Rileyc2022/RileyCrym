@@ -5,7 +5,12 @@ function getDistance(xA, yA, xB, yB) {
 
 	if( Math.sqrt(xDiff * xDiff + yDiff * yDiff).toString().length > 5){
         let temp = xDiff * xDiff + yDiff * yDiff;
-        answer.value = "\\sqrt{" + temp + "}"
+        if(simplify(temp).simplifies){
+            answer.value = simplify(temp).outside + "\\sqrt{" + simplify(temp).inside + "}"
+            console.log(temp, simplify(temp).outside, simplify(temp).inside)
+        }else{
+            answer.value = "\\sqrt{" + temp + "}"
+        }
         answer.isMathJax = true
         
     }else{
@@ -13,7 +18,22 @@ function getDistance(xA, yA, xB, yB) {
         answer.isMathJax = false
     }
 }
-
+function simplify(num){
+    let outside = null;
+    let inside = null;
+    let simplifies = false;
+    for(let i = num - 1; i > 0; i--){
+    let maybeOutside = Math.sqrt(num / i)
+    if( maybeOutside.toString().length < 10){
+        // console.log(maybeOutside)
+    outside = maybeOutside
+    inside = i
+    simplifies = true;
+    }
+    }
+    
+    return {outside: outside, inside: inside, simplifies: simplifies}
+}
 
 // var math = MathJax.Hub.getAllJax("anw")[0];
     

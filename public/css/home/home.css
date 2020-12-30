@@ -1,0 +1,28 @@
+section#hero{
+    width: 100%;
+    height: 100vh;
+}
+section#hero > div.flex{
+    width: 100%;
+    height: 80%;
+}
+div#hero-text{
+    text-align: left;
+}
+div#shove{
+    height: 100%;
+    width: 35%;
+}
+div#hero-text > div#hi{
+    font-size: 5em;
+    color:white;
+
+}
+div#hero-text > div#desc{
+    font-size: 1.6em;
+    color: var(--sub-text);
+}
+div.checkOut > p{
+ font-size: 2em;
+ color: var(--sub-text)
+}
