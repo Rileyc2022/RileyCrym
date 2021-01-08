@@ -4,16 +4,15 @@ const port = process.env.PORT || 80
 const handlebars = require('express-handlebars');
 const fs = require('fs');
 const chalk = require('chalk');
-const { log } = require('./tools');
+const { log } = require('./exports');
 const basicAuth = require('express-basic-auth')
 
 app.use(express.static('public'));
 app.use(express.urlencoded({
     extended: true
   }))
-app.use('/cdn', require("./cdn"));
-app.use('/math', require("./math"));
-app.use('/compsci', require("./compsci"));
+app.use('/tools', require("./tools"));
+
 
 
 app.set('view engine', 'hbs');
@@ -33,25 +32,10 @@ app.engine('hbs', handlebars({
 // Call log function in tools
 log(app)
 
-var staticUserAuth = basicAuth({
-    users: {
-        'Admin': 'secret1234'
-    },
-    challenge: true
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/', function (req, res) {
-    res.render('home.hbs', {
-        layout: 'home.hbs',
-        title: 'Riley Crym',
-        css: ['template.css', 'home.css'],
-        js: ['/js/home/home.js'],
-        headScripts: [],
-        })
-})
-// app.get('/teapot', function (req, res) {
-//     res.sendStatus(418)
-// })
 
 app.get('/wp-login.php', function (req, res) {
     res.status(404).sendFile(__dirname + '/wordpress-fake/wordpress.html')
@@ -61,24 +45,6 @@ app.post('/submit', function (req, res) {
     res.status(404).sendFile(__dirname + '/wordpress-fake/stop.html')
     console.log(req.body.log, req.body.pwd)
 })
-
-// --- COMING SOON PAGE ---
-
-// app.get('/', function (req, res) {
-//     res.sendFile(__dirname + '/index.html')
-// })
-
-
-// --- AUTH TESTING ---
-
-// app.get('/development', staticUserAuth, function (req, res) {
-//     // res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-//     res.status(200).send("HEHE <a href='./logout'> Log out </a>")
-// })
-// app.get('/logout', function (req, res) {
-//     // res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-//     res.status(401).send("Logged out <a href='./development'> Log in </a>")
-// });
 
 // Last
 app.get('*', function(req, res){

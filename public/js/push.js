@@ -1,1 +1,0 @@
-$('div#push').css("height", $('nav').height() + $('div#divider').height())
