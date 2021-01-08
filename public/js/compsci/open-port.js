@@ -30,23 +30,36 @@ var current = 0;
         };
         // console.log("sent")
         console.log("Sent" + count)
-        $.get('/compsci/port', parameters, function (data) {
+        $.get('/tools/networking/open-port-check/port', parameters, function (data) {
             console.log("Received" + data.count)
             current++;
             if(data.count >= current && noneEmpty()){
+                if(data.results == "invalid"){
+                    $('#not-valid-message').css("display", "block")
+                    $('#success-message').css("display", "none")
+                    $('#waiting-message').css("display", "none")
+                }
+                else{
+                    $('#not-valid-message').css("display", "none")
                 $('#results').html(data.results);
                 $('#port-copy').html(port)
                 $('#ip-copy').html(ip)
-                $('#success-message').css("display", "block")
                 $('#waiting-message').css("display", "none")
-                if(data.results == "open"){
-                    $('#results').removeClass("closed")
-                    $('#results').addClass("open")
+
+
+                    $('#success-message').css("display", "block")
+                    if(data.results == "open"){
+                        $('#results').removeClass("closed")
+                        $('#results').addClass("open")
+                    }
+                    if(data.results == "closed"){
+                        $('#results').removeClass("open")
+                        $('#results').addClass("closed")
+
+                    }
                 }
-                if(data.results == "closed"){
-                    $('#results').removeClass("open")
-                    $('#results').addClass("closed")
-                }
+
+
             }
             console.log(data, parameters, current)
         });
@@ -61,6 +74,7 @@ var current = 0;
         $('#port-copy').html("")
         $('#ip-copy').html("")
         $('#success-message').css("display", "none")
+        $('#not-valid-message').css("display", "none")
         $('#waiting-message').css("display", "block")
     }
 });

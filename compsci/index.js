@@ -30,10 +30,12 @@ router.get('/', function(req, res){
       })
 })
 router.get('/port', function(req, res){
+  if(req.query.ip && req.query.port){
+
+  
     let ip = req.query.ip;
     let port = req.query.port;
     let count = req.query.count;
-
         portscanner.checkPortStatus(port, ip, function(error, status) {
         // Status is 'open' if currently in use or 'closed' if available
         if(error){
@@ -46,6 +48,7 @@ router.get('/port', function(req, res){
           res.send(data);
         }
       })
+    }
  });
 
 

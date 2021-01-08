@@ -10,18 +10,7 @@
     --sky-blue: #0099FF;
 }
 
-html,
-body {
-    background-color: var(--dark);
-    width: 100%;
-    height: 100%
-}
 
-body {
-    margin: 0px;
-    background: #222222;
-    font-family: "Kameron";
-}
 
 div.flex {
     display: flex;
@@ -30,7 +19,7 @@ div.flex {
 }
 
 div.flex.main {
-    background: var(--page);
+    background: #24262B;
 }
 
 
@@ -39,7 +28,6 @@ nav {
     position: fixed;
     width: 100%;
     height: 100px;
-
     background: white;
     z-index: 2;
 }

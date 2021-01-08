@@ -19,20 +19,12 @@
   "homepage": "https://github.com/Rileyc2022/RileyCrym#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "cheerio": "^1.0.0-rc.5",
     "express": "^4.17.1",
-    "express-basic-auth": "^1.2.0",
     "express-handlebars": "^5.2.0",
-    "express-rate-limit": "^5.2.3",
-    "g-i-s": "^2.1.6",
+    "is-valid-domain": "0.0.17",
     "morgan": "^1.10.0",
-    "path": "^0.12.7",
     "portscanner": "^2.2.0",
-    "psl": "^1.8.0",
-    "request": "^2.88.2",
-    "rotating-file-stream": "^2.1.3",
-    "serp": "^2.1.0",
-    "url-parse": "^1.4.7"
+    "rotating-file-stream": "^2.1.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

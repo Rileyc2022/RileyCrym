@@ -5,7 +5,7 @@ const handlebars = require('express-handlebars');
 const fs = require('fs');
 const chalk = require('chalk');
 const { log } = require('./exports');
-const basicAuth = require('express-basic-auth')
+
 
 app.use(express.static('public'));
 app.use(express.urlencoded({
