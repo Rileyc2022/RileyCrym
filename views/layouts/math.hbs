@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
@@ -12,6 +13,8 @@
     {{#each css}}
     <link rel="stylesheet" href="/css/math/{{this}}" />
     {{/each}}
+
+headScripts: ['https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',]});
 
     {{#each headScripts}}
     <script src="{{this}}"></script>
