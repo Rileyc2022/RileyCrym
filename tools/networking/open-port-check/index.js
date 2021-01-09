@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
     title: 'Open Port Check',
     css: ['/css/compsci/open-port.css'],
     js: ['/js/compsci/open-port.js'],
-    headScripts: []
+    headScripts: ['/js/recents.js']
   });
 
 })
@@ -30,7 +30,6 @@ router.get('/port', function (req, res) {
     var letters = /[a-zA-Z]/g;
 
     if (letters.test(ip)) {
-      /* do something if letters are found in your string */
       if (isValidDomain(ip)) {
         console.log("is a valid domain")
         scan(port, ip)

@@ -12,12 +12,13 @@ app.use(express.urlencoded({
     extended: true
   }))
 app.use('/tools', require("./tools"));
+app.use('/recently-used', require("./recently-used"));
 
 
 
 app.set('view engine', 'hbs');
 
-//instead of app.engine('handlebars', handlebars({
+
 app.engine('hbs', handlebars({
     // where to find layouts
     layoutsDir: __dirname + '/views/layouts',
@@ -36,6 +37,7 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html')
 })
 
+// Fake wordpress login to troll hackers :)
 
 app.get('/wp-login.php', function (req, res) {
     res.status(404).sendFile(__dirname + '/wordpress-fake/wordpress.html')
@@ -43,6 +45,7 @@ app.get('/wp-login.php', function (req, res) {
 })
 app.post('/submit', function (req, res) {
     res.status(404).sendFile(__dirname + '/wordpress-fake/stop.html')
+    // What they put in the login
     console.log(req.body.log, req.body.pwd)
 })
 

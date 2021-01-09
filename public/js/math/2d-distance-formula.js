@@ -1,5 +1,30 @@
+
+var recents = new Recents()
+
+if(localStorage.hasOwnProperty('recently-used')){
+    let retrievedObject = localStorage.getItem('recently-used')
+    recents.reBuild(JSON.parse(retrievedObject))
+}
+
+recents.add("Distance Formula", timestamp())
+
+localStorage.setItem('recently-used', JSON.stringify(recents.toArray()));
+
+
+function timestamp(){
+    var t = new Date();
+    var date = ('0' + t.getDate()).slice(-2);
+    var month = ('0' + (t.getMonth() + 1)).slice(-2);
+    var year = t.getFullYear();
+    var hours = ('0' + t.getHours()).slice(-2);
+    var minutes = ('0' + t.getMinutes()).slice(-2);
+    var seconds = ('0' + t.getSeconds()).slice(-2);
+    var time = `${date}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
+    return time;
+}
+
+
 function getDistance(xA, yA, xB, yB) { 
-    // console.log(arguments)
 	var xDiff = xA - xB; 
 	var yDiff = yA - yB;
 
@@ -7,7 +32,6 @@ function getDistance(xA, yA, xB, yB) {
         let temp = xDiff * xDiff + yDiff * yDiff;
         if(simplify(temp).simplifies){
             answer.value = simplify(temp).outside + "\\sqrt{" + simplify(temp).inside + "}"
-            console.log(temp, simplify(temp).outside, simplify(temp).inside)
         }else{
             answer.value = "\\sqrt{" + temp + "}"
         }
@@ -25,7 +49,6 @@ function simplify(num){
     for(let i = num - 1; i > 0; i--){
     let maybeOutside = Math.sqrt(num / i)
     if( maybeOutside.toString().length < 10){
-        // console.log(maybeOutside)
     outside = maybeOutside
     inside = i
     simplifies = true;
@@ -102,7 +125,7 @@ $('input').val('')
 $('span#anw').html('')
 nums = []
 updateTable([nums[0], nums[2]], [nums[1], nums[3]])
-// alert('click')
+
 })
 
 var calcElt = document.getElementById('calculator');
@@ -115,25 +138,6 @@ let options = {
 
 
 var calculator = Desmos.GraphingCalculator(calcElt, options);
-// var img2x = document.getElementById('screenshot-2x');
-
-
-// function captureScreenshots() {
-//     img2x.src = calculator.screenshot({
-//         height: 300,
-//         width: 300,
-//         targetPixelRatio: 2
-//       });
-
-//     // alert("captured")
-//   }
-//   function setImageSrc(data) {
-//     var img2x = document.getElementById('screenshot-2x');
-//     img2x.src = data;
-//   }
-  
-  // Show -5 to 5 on the x-axis and preserve the aspect ratio
-
 
 function updateTable (xvalues, yvalues) {
     calculator.setExpression({
@@ -146,61 +150,10 @@ function updateTable (xvalues, yvalues) {
         ]
         });
 
-        // screenshot(xvalues, yvalues)
-
 }
 
 $('div#calculator').height($('div.tool').height())
 
-// $('body').jGravity({ 
-//     target: 'everything',
-//     drag: true,
-//     depth: 3,
-// });
-
-
-
-// screenshot()
-// let bounds={
-//     left: 0,
-//     right: 0,
-//     top: 0,
-//     bottom: 0,
-// }
-
-// how to use ternary operator in javascriptJavascript By Helpless Hamster on Jul 16 2020 Donate
-// var age = 26;
-// var beverage = (age >= 21) ? "Beer" : "Juice";
-// function updateBounds(){
-//     if(xvalues[0] < 10 && xvalues[0] < 0 ){
-//         bounds.left = 10
-//     }else{
-//         bounds.left = xvalues[0].toString()[0]
-//     }
-//     if(xvalues[1] < 10 && xvalues[1] < 0){
-//         bounds.left = xvalues[0].toString()[0]
-//     }
-// }
-
-
-// javascript find smallest number in an arrayJavascript By Yawning Yak on Feb 15 2020
-// const arr = [14, 58, 20, 77, 66, 82, 42, 67, 42, 4]
-// const min = Math.min(...arr)
-// function screenshot(xvalues, yvalues){
-//     // updateBounds()
-//     calculator.asyncScreenshot(
-//         {
-//             mode: 'contain',
-//             width: 600,
-//             height: 600,
-//             mathBounds: { left: Math.min(...xvalues) * 1.2, right: Math.max(...xvalues) * 1.2,},
-//             targetPixelRatio: 1
-//           },
-//         setImageSrc
-//       );
-      
-//       console.log(Math.min(...xvalues) * 1.2, Math.max(...xvalues) * 1.2)
-// }
 
 
  

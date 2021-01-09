@@ -1,3 +1,28 @@
+
+var recents = new Recents()
+
+if(localStorage.hasOwnProperty('recently-used')){
+    let retrievedObject = localStorage.getItem('recently-used')
+    recents.reBuild(JSON.parse(retrievedObject))
+}
+
+recents.add("Open Port Check", timestamp())
+
+localStorage.setItem('recently-used', JSON.stringify(recents.toArray()));
+
+
+function timestamp(){
+    var t = new Date();
+    var date = ('0' + t.getDate()).slice(-2);
+    var month = ('0' + (t.getMonth() + 1)).slice(-2);
+    var year = t.getFullYear();
+    var hours = ('0' + t.getHours()).slice(-2);
+    var minutes = ('0' + t.getMinutes()).slice(-2);
+    var seconds = ('0' + t.getSeconds()).slice(-2);
+    var time = `${date}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
+    return time;
+}
+
 $(function () {
 var count = 0;
 var current = 0;

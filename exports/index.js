@@ -4,10 +4,12 @@ module.exports = {
         var morgan = require('morgan')
         var path = require('path')
         var rfs = require('rotating-file-stream') // version 2.x
+
         // log only 4xx and 5xx responses to console
         app.use(morgan('dev', {
             skip: function (req, res) { return res.statusCode < 400 }
         }))
+
         
         // create a rotating write stream
         var accessLogStream = rfs.createStream('access.log', {

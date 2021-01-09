@@ -1,3 +1,0 @@
-::1 - - [29/Dec/2020:04:23:26 +0000] "GET / HTTP/1.1" 200 4822 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36"
-::1 - - [29/Dec/2020:04:23:26 +0000] "GET /js/home/home.js HTTP/1.1" 404 3801 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36"
-::1 - - [29/Dec/2020:04:23:27 +0000] "GET /js/home/home.js HTTP/1.1" 404 3801 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36"
