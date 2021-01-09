@@ -10,7 +10,6 @@
     for(element of entries){
         var newRecord = record.cloneNode(true);
         entriesContainer.appendChild(newRecord);
-        console.log(newRecord)
         newRecord.children[0].innerHTML = element.tool;
         newRecord.children[1].innerHTML = element.timestamp;
     }

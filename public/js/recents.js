@@ -20,7 +20,6 @@ class Recents {
       timestamp: timestamp
     }
     this.record.push(entry)
-    console.log("entry added recents is now: ", this.record)
   }
 
   toArray(){

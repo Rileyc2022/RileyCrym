@@ -23,6 +23,7 @@ function timestamp(){
     return time;
 }
 
+
 $(function () {
 var count = 0;
 var current = 0;
@@ -86,7 +87,6 @@ var current = 0;
 
 
             }
-            console.log(data, parameters, current)
         });
     }
     function noneEmpty(){

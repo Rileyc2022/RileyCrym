@@ -31,7 +31,6 @@ router.get('/port', function (req, res) {
 
     if (letters.test(ip)) {
       if (isValidDomain(ip)) {
-        console.log("is a valid domain")
         scan(port, ip)
       } else {
         data.results = 'invalid'

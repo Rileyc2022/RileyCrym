@@ -2,10 +2,13 @@
 var recents = new Recents()
 
 if(localStorage.hasOwnProperty('recently-used')){
+    console.log("fount r")
     let retrievedObject = localStorage.getItem('recently-used')
     recents.reBuild(JSON.parse(retrievedObject))
+
 }
 
+console.log(recents)
 recents.add("Distance Formula", timestamp())
 
 localStorage.setItem('recently-used', JSON.stringify(recents.toArray()));

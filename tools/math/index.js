@@ -11,9 +11,8 @@ router.get('/2d-distance-formula', function(req, res){
             css: ['/css/math/2d-distance-formula.css'],
             js: ['/js/math/2d-distance-formula.js'],
             headScripts: ['/js/recents.js', 'https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',]});
+
     
 })
-
-
 
 module.exports = router;

@@ -30,7 +30,6 @@ app.engine('hbs', handlebars({
     partialsDir: __dirname + '/views/partials/'
 }));
 
-// Call log function in tools
 log(app)
 
 app.get('/', function (req, res) {
