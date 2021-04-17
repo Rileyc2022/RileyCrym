@@ -7,7 +7,6 @@
 }
 
 div.main{
-    /* background: linear-gradient(180deg, #0099FF 0%, rgba(255, 255, 255, 0) 100%), #0099FF; */
     background-color: #24262B;
 }
 
@@ -26,7 +25,6 @@ section.tools {
 div.tool{
 color: white;
     width: 40%;
-    /* height: 30vw; */
     padding: 2em;
     background-color: #3a3d46;
     border-radius: 20px;
@@ -72,7 +70,7 @@ div#success-message > span.constColor{
     color: red;
 }
 div#waiting-message{
-    /* color: var(--sub-text); */
+    color: #7e8188;
 }
 div#not-valid-message{
     display: none;
@@ -88,12 +86,5 @@ p#warning{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-
-    
+ 
 }
-/* --red: red;
---orange: #E64910;
---teal: #36BCDA;
---green: #17BD28;
---purple: #9C4CDC;
---sky-blue: #0099FF; */

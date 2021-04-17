@@ -34,8 +34,8 @@ module.exports = {
             }
         });
         var mailOptions = {
-            from: 'rileyc2022@headroyce.org',
-            to: 'rileyc2022@headroyce.org',
+            from: process.env.EMAIL_ADDRESS,
+            to: process.env.EMAIL_ADDRESS,
             subject: subject,
             text: text,
         };

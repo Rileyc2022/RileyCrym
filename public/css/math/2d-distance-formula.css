@@ -6,7 +6,6 @@
 }
 
 div.myflex.main{
-    /* background: linear-gradient(180deg, #0099FF 0%, rgba(255, 255, 255, 0) 100%), #0099FF; */
     background-color: #24262B;
     color: white;
     height: 90vh;
@@ -66,14 +65,12 @@ input{
 input:focus{
     outline: none !important;
     border: 2px solid #42B3FF;
-    /* box-shadow: 0px 0px 2px var(--sky-blue); */
 }
 
 div#input-label{
     text-align: center;
     font-size: 1.2em;
 }
-
 
 
 div.x{
@@ -152,7 +149,6 @@ div.faqs{
 }
 div.header{
     font-size: 1.4em;
-    /* color: var(--sub-text) */
 }
 
 div.tool-info > p{
@@ -161,9 +157,7 @@ div.tool-info > p{
     line-height: 150%;
 
 }
-hr{
-    /* color: var(--sub-text); */
-}
+
 .centered{
     text-align: center;
 

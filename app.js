@@ -13,9 +13,9 @@ app.use(cookieParser());
 //     extended: true
 //   }))
 
-var password = "tZeKxest7LqUVyzk"
+// var password = "tZeKxest7LqUVyzk"
 
-
+app.use(express.static('public'));
 app.set('view engine', 'hbs');
 
 app.engine('hbs', handlebars({
@@ -66,28 +66,29 @@ app.all('*', function (req, res, next) {
     res.sendFile(__dirname + '/public/pages/EU-block.html')
 })
 
-app.get('/viewprod/:pwd', function (req, res) {
-    if(req.params.pwd == password){
-        res.cookie('auth', password, { maxAge: 157784760000, httpOnly: true });
-        console.log('cookie created successfully');
-      res.redirect('/')
-    }
-})
+// ---- PROD PRIVATE ---- //
+// app.get('/viewprod/:pwd', function (req, res) {
+//     if(req.params.pwd == password){
+//         res.cookie('auth', password, { maxAge: 157784760000, httpOnly: true });
+//         console.log('cookie created successfully');
+//       res.redirect('/')
+//     }
+// })
 
-app.get('/coming-soon', function (req, res) {
-    res.sendFile(__dirname + '/coming-soon.html')
-})
-  // Authed or not?
-  app.use((req, res, next)=>{
-    if(req.cookies.auth == password){
-      next()
-    }
-    else{
-        res.redirect('/coming-soon')
-    }
-  })
+// app.get('/coming-soon', function (req, res) {
+//     res.sendFile(__dirname + '/coming-soon.html')
+// })
+//   // Authed or not?
+//   app.use((req, res, next)=>{
+//     if(req.cookies.auth == password){
+//       next()
+//     }
+//     else{
+//         res.redirect('/coming-soon')
+//     }
+//   })
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 app.use('/tools', require("./tools"));
 
 
