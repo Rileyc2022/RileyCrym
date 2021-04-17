@@ -1,0 +1,33 @@
+{
+  "name": "rileycrym",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev-start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rileyc2022/RileyCrym.git"
+  },
+  "author": "Riley C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rileyc2022/RileyCrym/issues"
+  },
+  "homepage": "https://github.com/Rileyc2022/RileyCrym#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "geoip-lite": "^1.4.2",
+    "is-valid-domain": "0.0.17",
+    "nodemailer": "^6.5.0",
+    "portscanner": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

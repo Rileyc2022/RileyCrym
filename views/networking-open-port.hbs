@@ -1,0 +1,24 @@
+
+<div class="myflex main">
+    <section class="tools myflex">
+
+        <div class="tool">
+        <h1 id="title">Open Port Check</h1>
+        <hr>
+         <form action="compsci/" method="GET">
+    IP address or hostname:<br>
+    <input type="text" name="ip" id="ip" placeholder="e.g. www.example.com "><br>
+    Port:<br>
+    <input type="number" name="port" id="port" placeholder="e.g. 80">
+
+</form>
+    <div id="status">Status:</div>
+    <div id="waiting-message" class="status-message" >Waiting for input...</div>
+    <div id="not-valid-message" class="status-message" ></div>
+    <div id="success-message" class="status-message" >Port <span id="port-copy" class="constColor"></span> on <span id="ip-copy" class="constColor"></span> is currently <span id="results"></span></div>
+</div>
+    </section>
+            
+</div>
+        <p id="warning">To use this tool, you are required to have obtained explicit permission from the owner of the targeted computer prior to scanning, and you agree to follow your local portscanning laws.</p>
+
